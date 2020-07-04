@@ -1,0 +1,12 @@
+#topNavigationBar {
+  background-color: #B0FCFC;
+  width: 100%;
+  height: 70px;
+  display: block;
+}
+
+#randomContent {
+  font-size: 30px;
+  display: inline;
+  background-color: 'brown';
+}
