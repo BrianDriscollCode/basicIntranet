@@ -1,12 +1,86 @@
+/*Top Navigation left and bar */
 #topNavigationBar {
-  background-color: #B0FCFC;
+  background-color: #062b48;
   width: 100%;
   height: 70px;
   display: block;
 }
 
-#randomContent {
-  font-size: 30px;
+#topLogo {
   display: inline;
-  background-color: 'brown';
+  margin-left: 10px;
+  height: 70px;
+}
+
+#dropDownButton {
+  display: inline;
+  margin-bottom:3px;
+  padding-left: 10px;
+}
+
+/* user profile section top right */
+
+.userInfo {
+  display: inline-block;
+}
+
+#userProfileSection {
+  width: 180px;
+  position: relative;
+  right: 45px;
+  top: 15px;
+  float: right;
+}
+
+#userPhoto {
+  height: 40px;
+  border-radius: 150px;
+}
+
+#userNameTopRight {
+  position: relative;
+  color: white;
+  bottom: 25px;
+}
+
+#userArrow {
+  padding-left: 5px;
+  position: relative;
+  bottom: 5px;
+  height: 30px;
+}
+
+#userStatus {
+  color: lightgreen;
+  font-size: 15px;
+  font-style: bold;
+  position: relative;
+  bottom: 60px;
+  left: 45px;
+}
+
+/* Navigation Area */
+
+#sideBar {
+  list-style: none;
+  float: left;
+  background-color: #fcb71b;
+  width: 280px;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+/* main content */
+
+#mainContent {
+  background-color: grey;
+  height: 97.6%;
+  width: 99%;
+  margin-top: -7px;
+  margin-left: 4px;
+}
+
+h1 {
+  font-size: 400px;
 }
