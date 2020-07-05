@@ -12,10 +12,16 @@
   height: 70px;
 }
 
+
 #dropDownButton {
   display: inline;
   margin-bottom:3px;
   padding-left: 10px;
+}
+
+#dropDownButton:hover {
+  transition: 0.2s;
+  transform: scale(1.05);
 }
 
 /* user profile section top right */
@@ -62,25 +68,56 @@
 /* Navigation Area */
 
 #sideBar {
-  list-style: none;
   float: left;
   background-color: #fcb71b;
-  width: 280px;
+  width: 318px;
   margin-top: 0;
   margin-bottom: 0;
   height: 100%;
 }
 
+#sideBarItems {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sideBarButtons {
+  font-family: Lucida Sans Unicode;
+  border-style: none none solid none;
+  border-color: #EDAE1A;
+  background-color: #fcb71b;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.sideBarButtons:hover {
+  transition: 0.2s;
+  background-color: #E0A419;
+  font-size: 16.5px;
+}
+
+.buttonLines {
+  color: black;
+  background-color: black;
+}
+
 /* main content */
 
 #mainContent {
-  background-color: grey;
+  background-color: #F6F6F7;
   height: 97.6%;
-  width: 99%;
-  margin-top: -7px;
-  margin-left: 4px;
+  width: 80%;
+  margin-left: 350px;
+  margin-top: 27px;
 }
 
 h1 {
+  font-family: Lucida Sans Unicode;
+  text-align: center;
+  padding-top: 20px;
   font-size: 400px;
 }
