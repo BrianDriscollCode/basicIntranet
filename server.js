@@ -13,5 +13,21 @@ console.log('server activated');
 
 
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('dashboard');
+});
+
+app.get('/news-feed', (req, res) => {
+  res.render('newsFeed');
+});
+
+app.get('/company-page', (req, res) => {
+  res.render('companyPage');
+});
+
+app.get('/teams', (req, res) => {
+  res.render('teams');
+});
+
+app.get('/my-profile', (req, res) => {
+  res.render('myProfile');
 });
