@@ -5,6 +5,7 @@
   <body>
     <header>
       <%- include('./partials/topNavigationBar.ejs') %>
+      <link rel="stylesheet" type="text/css" href="/dashboardstyles.css">
     </header>
 
     <aside>
@@ -13,32 +14,59 @@
 
     <main id="mainContent">
 
+      <div id="headerArea">
       <h1> Dashboard </h1>
+      <div>
 
-      <div id="row1">
-        <div id="linksAndResources">
-          <button> <img src="userArrow.png" class="topRowResources" id="myProfile" /></button>
-          <p> My Profile </p>
+      <div id="row1Container">
 
-          <button> <img src="userArrow.png" class="topRowResources" id="myProfile" /></button>
-          <p> My Profile </p>
 
-          <button> <img src="userArrow.png" class="topRowResources" id="myProfile" /></button>
-          <p> My Profile </p>
 
-          <button> <img src="userArrow.png" class="bottomRowResources" id="myProfile" /></button>
-          <p> My Profile </p>
+          <div id="linksAndResources">
 
-          <button> <img src="userArrow.png" class="bottomRowResources" id="myProfile" /></button>
-          <p> My Profile </p>
+            <div id="linksAndResourcesTitleSection">
+              <h3 id="linksAndResourcesTitle"> Links and Resources </h3>
+              <hr id="linksAndResourcesTitleLine">
+            </div>
 
-          <button> <img src="userArrow.png" class="bottomRowResources" id="myProfile" /></button>
-          <p> My Profile </p>
+            <div class="resourceButtons topRowResources">
+              <button> <img src="userArrow.png" id="myProfile" /></button>
+              <p class="resourceButtonText"> My Profile </p>
+            </div>
 
-        </div>
+            <div class="resourceButtons topRowResources">
+              <button> <img src="userArrow.png" id="myProfile" /></button>
+              <p class="resourceButtonText"> My Profile </p>
+            </div>
+
+            <div class="resourceButtons topRowResources">
+              <button> <img src="userArrow.png" id="myProfile" /></button>
+              <p class="resourceButtonText"> My Profile </p>
+            </div>
+
+            <div class="resourceButtons bottomRowResources">
+              <button> <img src="userArrow.png" id="myProfile" /></button>
+              <p class="resourceButtonText"> My Profile </p>
+            </div>
+
+            <div class="resourceButtons bottomRowResources">
+              <button> <img src="userArrow.png" id="myProfile" /></button>
+              <p class="resourceButtonText"> My Profile </p>
+            </div>
+
+            <div class="resourceButtons bottomRowResources">
+              <button> <img src="userArrow.png" id="myProfile" /></button>
+              <p class="resourceButtonText"> My Profile </p>
+            </div>
+
+          </div>
 
 
         <div id="news">
+          <div id="newsImageContainer">
+            <img id="news1Image" src="news1.jpg" style="width:400px;">
+            
+          </div>
         </div>
 
       </div>

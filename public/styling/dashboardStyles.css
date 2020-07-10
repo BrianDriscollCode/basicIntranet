@@ -1,0 +1,90 @@
+/*links and resource section */
+
+#row1Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+#linksAndResources {
+  display: flex;
+  border: 1px solid black;;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 55%;
+  background-color: #F6F6F6;
+}
+
+#linksAndResourcesTitleSection {
+  flex-basis: 100%;
+  background-color: #062b48;
+  height: 33px;
+}
+
+#linksAndResourcesTitle {
+  flex-basis: 100%;
+  padding-left: 20px;
+  text-align: center;
+  position: relative;
+  color: white;
+  bottom: 14px;
+}
+
+#linksAndResourcesTitleLine {
+  position: relative;
+  flex-basis: 100%;
+  bottom: 25px;
+}
+
+#linksAndResources.img {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.resourceButtons {
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+.resourceButtonText {
+  float: right;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.topRowResources {
+  margin-top: 15px;
+}
+
+.bottomRowResources {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#myProfile {
+  width: 50px;
+}
+
+/* News Gallery */
+
+#news {
+  width: 30%;
+  margin-left: 50px;
+}
+
+/* #newsImageContainer #news2Image  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#newsImageContainer #news3Image  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+} */

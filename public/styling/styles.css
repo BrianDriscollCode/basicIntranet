@@ -108,7 +108,7 @@
 /* main content */
 
 #mainContent {
-  background-color: #F6F6F7;
+  background-color: white;
   height: 97.6%;
   width: 80%;
   margin-left: 350px;
@@ -120,4 +120,10 @@ h1 {
   text-align: center;
   padding-top: 20px;
   font-size: 400px;
+}
+
+/* Header in main content*/
+#headerArea {
+  background-color: #F2F2F2;
+  height: 73px;
 }
