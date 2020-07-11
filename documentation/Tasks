@@ -1,0 +1,15 @@
+1. Add News newsGallery
+  A. HTML CSS (DONE)
+  B. JavaScript Portion
+    I - add event listeners to buttons
+    II - add opacity changes to newsImages
+    III - Add title, author changes
+    IV - add view update changes when article
+        is clicked
+
+        *Image 3 is on top of other newsImages
+        therefore shows first. Buttons are
+        reversed (first button is actually
+        labeled button 3) to maintain the order
+
+2. Add media query for width of mainContent

@@ -1,3 +1,13 @@
+p, h1, h3, a {
+  font-family: Lucida Sans Unicode;
+}
+
+a {
+  color: white;
+  
+}
+
+
 /*links and resource section */
 
 #row1Container {
@@ -9,11 +19,12 @@
 
 #linksAndResources {
   display: flex;
-  border: 1px solid black;;
+  border: 1px solid #F2F2F2;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
   width: 55%;
+  height: 400px;
   background-color: #F6F6F6;
 }
 
@@ -29,7 +40,7 @@
   text-align: center;
   position: relative;
   color: white;
-  bottom: 14px;
+  bottom: 13px;
 }
 
 #linksAndResourcesTitleLine {
@@ -73,6 +84,83 @@
 #news {
   width: 30%;
   margin-left: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#newsTitleSection {
+  background-color: #062b48;
+  height: 33px;
+  position: relative;
+  bottom: 19px;
+}
+
+#newsTitle {
+  color: white;
+  position: relative;
+  top: 5px;
+
+}
+
+#news1Image {
+  position: relative;
+  bottom: 19px;
+  left: 0;
+}
+
+.newsImages {
+  object-fit: cover;
+}
+
+#news2Image {
+  position: relative;
+  bottom: 252px;
+}
+
+#news3Image {
+  position: relative;
+  bottom: 485px;
+}
+
+#newsImageContainer {
+  height: 400px;
+  width: 350px;
+  text-align: center;
+  position: relative;
+  background-color: #fcb71b;
+  border: 1px solid #F2F2F2;
+}
+
+#newsGalleryFunctionality {
+  position: relative;
+  bottom: 500px;
+  left: 10px;
+  text-align: left;
+}
+
+#newsAuthor {
+  position: relative;
+  bottom: 5px;
+  color: white;
+}
+
+#newsViewCount {
+  float: right;
+  position: relative;
+  bottom: 38px;
+  right: 22px;
+  color: white;
+}
+
+.newsButtons {
+  position: relative;
+  left: 115px;
+  top: 30px;
+}
+
+#newsButton3 {
+  background-color: #FFD577;
+  border-radius: 100px;
 }
 
 /* #newsImageContainer #news2Image  {
