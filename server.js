@@ -45,6 +45,6 @@ fs.readFile('./serverStoredInformation/news.json', (err, data) => {
   console.log(newsStories);
 });
 
-}
+
 
 module.exports = newsStories;
