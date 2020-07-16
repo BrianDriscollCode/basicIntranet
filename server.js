@@ -6,7 +6,8 @@ app.use(express.static('./public/styling'));
 app.use(express.static('./public/users'));
 app.use(express.static('./public/newsGallery'));
 app.use(express.static('JavaScriptFrontEnd'));
-app.use(express.static('serverStoredInformation'))
+app.use(express.static('./serverStoredInformation'))
+
 
 app.listen(3000);
 
@@ -34,17 +35,22 @@ app.get('/my-profile', (req, res) => {
   res.render('myProfile');
 });
 
-
 const fs = require('fs');
 
 let newsStories;
 
-fs.readFile('./serverStoredInformation/news.json', (err, data) => {
-  if (err) throw err;
-  newsStories = JSON.parse(data);
-  console.log(newsStories);
-});
+function readNewsStorage(callback) {
+  fs.readFile('./serverStoredInformation/news.json', (err, data) => {
+    if (err) throw err;
+    newsStories = JSON.parse(data);
+    callback();
+  });
+}
 
+function createNewsEndPoint() {
+  app.get('/api/newsStories', (req, res) => {
+    res.json(newsStories);
+  });
+}
 
-
-module.exports = newsStories;
+readNewsStorage(createNewsEndPoint);

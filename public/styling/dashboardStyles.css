@@ -4,7 +4,7 @@ p, h1, h3, a {
 
 a {
   color: white;
-  
+
 }
 
 
@@ -102,7 +102,7 @@ a {
 
 }
 
-#news1Image {
+#news3Image {
   position: relative;
   bottom: 19px;
   left: 0;
@@ -117,7 +117,7 @@ a {
   bottom: 252px;
 }
 
-#news3Image {
+#news1Image {
   position: relative;
   bottom: 485px;
 }
@@ -158,10 +158,6 @@ a {
   top: 30px;
 }
 
-#newsButton3 {
-  background-color: #FFD577;
-  border-radius: 100px;
-}
 
 /* #newsImageContainer #news2Image  {
   position: absolute;

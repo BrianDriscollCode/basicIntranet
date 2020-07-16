@@ -1,4 +1,24 @@
 {
-    "title": "Welcome George to the Team!",
-    "author": "Brian Driscoll"
+
+  "currentNews": [
+
+    {
+        "title": "Welcome George to the Team!",
+        "author": "Brian Driscoll",
+        "viewCount": 0
+    },
+
+    {
+        "title": "The kids are Playing!",
+        "author": "John Biasco",
+        "viewCount": 0
+
+    },
+
+    {
+        "title": "Important Meeting Today",
+        "author": "Karen Matherson",
+        "viewCount": 0
+    }
+  ]
 }
