@@ -5,20 +5,20 @@
     {
         "title": "Welcome George to the Team!",
         "author": "Brian Driscoll",
-        "viewCount": 0
+        "viewCount": 2
     },
 
     {
         "title": "The kids are Playing!",
         "author": "John Biasco",
-        "viewCount": 0
+        "viewCount": 4
 
     },
 
     {
         "title": "Important Meeting Today",
         "author": "Karen Matherson",
-        "viewCount": 0
+        "viewCount": 12
     }
   ]
 }
