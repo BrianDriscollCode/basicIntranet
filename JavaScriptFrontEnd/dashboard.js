@@ -8,38 +8,59 @@ const newsImage2 = document.getElementById('news2Image');
 const newsImage1 = document.getElementById('news1Image');
 
 let galleryTitle; //set after JSON is fetched
+let galleryCounter; //For automatically running gallery
 
-newsButton1.addEventListener('click', (event) => {
+function newsButtonClicked1() {
 
   newsTextGenerator(newsStories.currentNews[0].title, newsStories.currentNews[0].author);
   opacitySetter(newsImage3, newsImage2, newsImage1);
   galleryButtonHighlighter(newsButton3, newsButton2, newsButton1);
   getNewsViewCount(0);
   galleryTitle = document.getElementById('currentNewsTitle');
-  galleryTitleEventListener();
+  galleryTitleEventListener(); //reset eventlistener
+  galleryCounter = 1;
+  setGalleryToChange(galleryCounter);
+}
+
+newsButton1.addEventListener('click', (event) => {
+
+  newsButtonClicked1();
 
 });
+
+function newsButtonClicked2() {
+
+    newsTextGenerator(newsStories.currentNews[1].title, newsStories.currentNews[1].author);
+    opacitySetter(newsImage3, newsImage1, newsImage2);
+    galleryButtonHighlighter(newsButton3, newsButton1, newsButton2);
+    getNewsViewCount(1);
+    galleryTitle = document.getElementById('currentNewsTitle');
+    galleryTitleEventListener(); //reset eventlistener
+    galleryCounter = 2;
+    setGalleryToChange(galleryCounter);
+}
 
 newsButton2.addEventListener('click', (event) => {
 
-  newsTextGenerator(newsStories.currentNews[1].title, newsStories.currentNews[1].author);
-  opacitySetter(newsImage3, newsImage1, newsImage2);
-  galleryButtonHighlighter(newsButton3, newsButton1, newsButton2);
-  getNewsViewCount(1);
-  galleryTitle = document.getElementById('currentNewsTitle');
-  galleryTitleEventListener();
+  newsButtonClicked2();
 
 });
 
-newsButton3.addEventListener('click', (event) => {
+function newsButtonClicked3() {
 
   newsTextGenerator(newsStories.currentNews[2].title, newsStories.currentNews[2].author);
   opacitySetter(newsImage1, newsImage2, newsImage3);
   galleryButtonHighlighter(newsButton1, newsButton2, newsButton3);
   getNewsViewCount(2);
   galleryTitle = document.getElementById('currentNewsTitle');
-  galleryTitleEventListener();
+  galleryTitleEventListener(); //reset eventlistener
+  galleryCounter = 3;
+  setGalleryToChange(galleryCounter);
+}
 
+newsButton3.addEventListener('click', (event) => {
+
+  newsButtonClicked3();
 });
 
 //get news stories to update gallery
@@ -70,6 +91,9 @@ function setOriginalGallery() {
   galleryButtonHighlighter(newsButton1, newsButton2, newsButton3);
   getNewsViewCount(2);
   galleryTitle = document.getElementById('currentNewsTitle');
+  galleryCounter = 3;
+  setGalleryToChange(galleryCounter);
+
 }
 
 //Gallery functions
@@ -155,5 +179,15 @@ function galleryTitleEventListener() {
 
 }
 
+//Automatically run gallery slideshow
 
-//original gallery setting
+function setGalleryToChange(galleryCounter) {
+
+  if (galleryCounter === 1) {
+    setTimeout(newsButtonClicked3, 5000);
+  } else if (galleryCounter === 2) {
+    setTimeout(newsButtonClicked1, 5000);
+  } else {
+    setTimeout(newsButtonClicked2, 5000)
+  }
+}
