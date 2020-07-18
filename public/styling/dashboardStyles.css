@@ -7,6 +7,10 @@ a {
 
 }
 
+hr {
+  color: black;
+}
+
 
 /*links and resource section */
 
@@ -23,7 +27,7 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 55%;
+  width: 60%;
   height: 400px;
   background-color: #F6F6F6;
 }
@@ -157,17 +161,113 @@ a {
   top: 30px;
 }
 
+/* Social Media pane */
 
-/* #newsImageContainer #news2Image  {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+#row2Container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 33px;
+  margin-top: 33px;
+  margin-bottom: 100px;
 }
 
-#newsImageContainer #news3Image  {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-} */
+#socialMediaPane {
+  background-color: #F6F6F6;
+  width: 28%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 1px solid #F2F2F2;
+  height: 150px;
+}
+
+#socialMediaTitleSection {
+  flex-basis: 100%;
+  background-color: #062b48;
+  display: flex;
+  justify-content: center;
+  height: 33px;
+}
+
+#socialMediaTitle {
+  position: relative;
+  bottom: 12px;
+  color: white;
+
+}
+
+.socialIcons {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* Teams pane */
+
+#teamsPane {
+  background-color: #F6F6F6;
+  width: 23.8%;
+  position: relative;
+  left: 9.5%;
+  border: 1px solid #F2F2F2;
+}
+
+#teamsTitleSection {
+    flex-basis: 100%;
+    background-color: #062b48;
+    display: flex;
+    justify-content: center;
+    height: 33px;
+}
+
+#teamsTitle {
+  position: relative;
+  bottom: 12px;
+  color: white;
+}
+
+.teamEntries {
+  margin-left: 15px;
+  padding-top: 10px;
+}
+
+#teamEntry1 {
+  padding-top: 10px;
+}
+
+#teamEntry2 {
+  margin-top: -5px;
+}
+
+#teamEntry3 {
+  margin-top: -5px;
+}
+
+#teamEntry4 {
+  margin-top: -5px;
+  margin-bottom: -5px;
+}
+
+.teamPortraits {
+  border-radius: 100px;
+}
+
+.textTeamEntries {
+  float: right;
+  position: relative;
+  bottom: 23px;
+  right: 30px;
+}
+
+.teamAuthor {
+  color: black;
+}
+
+
+/* Questions pane */
+
+#questionsPane {
+  background-color: #F6F6F6;
+  width: 350px;
+  position: relative;
+  left: 18.54%;
+  border: 1px solid #F2F2F2;

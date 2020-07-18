@@ -5,8 +5,10 @@ app.use(express.static('public'));
 app.use(express.static('./public/styling'));
 app.use(express.static('./public/users'));
 app.use(express.static('./public/newsGallery'));
+app.use(express.static('./public/icons'));
 app.use(express.static('JavaScriptFrontEnd'));
-app.use(express.static('./serverStoredInformation'))
+app.use(express.static('./serverStoredInformation'));
+
 
 
 app.listen(3000);

@@ -181,13 +181,81 @@ function galleryTitleEventListener() {
 
 //Automatically run gallery slideshow
 
+let timer;
+
 function setGalleryToChange(galleryCounter) {
 
   if (galleryCounter === 1) {
-    setTimeout(newsButtonClicked3, 5000);
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(newsButtonClicked3, 5000);
   } else if (galleryCounter === 2) {
-    setTimeout(newsButtonClicked1, 5000);
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(newsButtonClicked1, 5000);
   } else {
-    setTimeout(newsButtonClicked2, 5000)
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(newsButtonClicked2, 5000)
   }
+}
+
+//Teams pane section
+
+const teamsPane = document.getElementById('teamsPane');
+
+//createTeamsEntry function creates this HTML layout
+//AND pulls info from JSON
+
+//<div id="teamEntry1" class="teamEntries">
+//  <img class="teamPortraits" src="Daria_Matthews.jpg" height="60" width="60">
+//  <div class="textTeamEntries">
+//    <h4> Finished Working on HTML </h4>
+//    <a class="teamAuthor" href="#"> <address> Joe Scarlett 7/18/20 1:15 PM</address> </a>
+//  </div>
+//</div>
+//<hr>
+
+function createTeamsEntry(idNumber, imageSource, entryTitle, authorPage, authorName, date, time) {
+
+  let entryDiv = document.createElement('DIV');
+  entryDiv.setAttribute('id', `teamEntry${idNumber}`);
+  entryDiv.setAttribute('class', 'teamEntries');
+
+  let employeePortrait = document.createElement('IMG');
+  employeePortrait.setAttribute('class', 'teamPortraits');
+  employeePortrait.src = imageSource;
+  employeePortrait.setAttribute('height', '60');
+  employeePortrait.setAttribute('width', '60');
+
+  entryDiv.appendChild(employeePortrait);
+
+  let textSection = document.createElement('DIV');
+  textSection.setAttribute('class', "textTeamEntries");
+
+  let teamEntryTitle = document.createElement('H4');
+  teamEntryTitle.textContent = entryTitle;
+
+  let authorLink = document.createElement('A');
+  authorLink.setAttribute('class', 'teamAuthor');
+  authorLink.href = authorPage;
+
+  let authorDateAndTime = document.createElement('ADDRESS');
+  authorDateAndTime.textContent = `${authorName} ${date} ${time}`;
+
+  authorLink.appendChild(authorDateAndTime);
+
+  textSection.appendChild(teamEntryTitle);
+  textSection.appendChild(authorLink);
+
+  entryDiv.appendChild(textSection);
+
+  teamsPane.appendChild(entryDiv);
+
+  let line = document.createElement('HR');
+  teamsPane.appendChild(line);
+
 }
