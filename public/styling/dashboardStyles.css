@@ -226,7 +226,7 @@ hr {
 }
 
 .teamEntries {
-  margin-left: 15px;
+  margin-right: 15px;
   padding-top: 10px;
 }
 
@@ -249,13 +249,13 @@ hr {
 
 .teamPortraits {
   border-radius: 100px;
+  float:right;
 }
 
 .textTeamEntries {
-  float: right;
   position: relative;
   bottom: 23px;
-  right: 30px;
+  left: 15px;
 }
 
 .teamAuthor {

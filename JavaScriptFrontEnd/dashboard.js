@@ -74,8 +74,8 @@ function fetchNews(callBack, galleryTitleEventListener) {
     .then((news) => {
       newsStories = news;
     })
-    .then(() => {
-      callBack(newsStories)
+    .then((news) => {
+      callBack();
     })
     .then(() => {
       galleryTitleEventListener();
@@ -219,7 +219,7 @@ const teamsPane = document.getElementById('teamsPane');
 //</div>
 //<hr>
 
-function createTeamsEntry(idNumber, imageSource, entryTitle, authorPage, authorName, date, time) {
+function createTeamsEntry(idNumber, authorPortrait, entryTitle, authorPage, authorName, date, time) {
 
   let entryDiv = document.createElement('DIV');
   entryDiv.setAttribute('id', `teamEntry${idNumber}`);
@@ -227,7 +227,7 @@ function createTeamsEntry(idNumber, imageSource, entryTitle, authorPage, authorN
 
   let employeePortrait = document.createElement('IMG');
   employeePortrait.setAttribute('class', 'teamPortraits');
-  employeePortrait.src = imageSource;
+  employeePortrait.src = authorPortrait;
   employeePortrait.setAttribute('height', '60');
   employeePortrait.setAttribute('width', '60');
 
@@ -255,7 +255,29 @@ function createTeamsEntry(idNumber, imageSource, entryTitle, authorPage, authorN
 
   teamsPane.appendChild(entryDiv);
 
-  let line = document.createElement('HR');
-  teamsPane.appendChild(line);
-
+  if (idNumber <= 2) {
+    let line = document.createElement('HR');
+    teamsPane.appendChild(line);
+  }
 }
+
+let teamEntries1;
+
+function fetchTeamEntries(callback) {
+  fetch('http://localhost:3000/api/teamEntries')
+    .then((response) => {
+      return response.json();
+    })
+    .then((entries) => {
+      teamEntries1 = entries;
+    })
+    .then(() => {
+      for (let i = 0; i < teamEntries1.teamEntries.length; i++) {
+        callback(i, teamEntries1.teamEntries[i].authorPortrait, teamEntries1.teamEntries[i].title,
+        teamEntries1.teamEntries[i].authorPage, teamEntries1.teamEntries[i].authorName,
+        teamEntries1.teamEntries[i].date, teamEntries1.teamEntries[i].time);
+      }
+    })
+}
+
+fetchTeamEntries(createTeamsEntry);

@@ -10,7 +10,6 @@ app.use(express.static('JavaScriptFrontEnd'));
 app.use(express.static('./serverStoredInformation'));
 
 
-
 app.listen(3000);
 
 app.set('view engine', 'ejs');
@@ -37,22 +36,38 @@ app.get('/my-profile', (req, res) => {
   res.render('myProfile');
 });
 
-const fs = require('fs');
 
-let newsStories;
+//read JSON data
+const fs = require('fs');
 
 function readNewsStorage(callback) {
   fs.readFile('./serverStoredInformation/news.json', (err, data) => {
     if (err) throw err;
-    newsStories = JSON.parse(data);
-    callback();
+    let newsStories = JSON.parse(data);
+    callback(newsStories);
   });
 }
 
-function createNewsEndPoint() {
+function createNewsEndPoint(newsStories) {
   app.get('/api/newsStories', (req, res) => {
     res.json(newsStories);
   });
 }
 
 readNewsStorage(createNewsEndPoint);
+
+function readTeamEntries(callback) {
+  fs.readFile('./serverStoredInformation/teamEntries.json', (err, data) => {
+    if (err) throw err;
+    let teamEntryData = JSON.parse(data);
+    callback(teamEntryData);
+  });
+}
+
+function createTeamEntryEndPoint(teamEntryData) {
+  app.get('/api/teamEntries', (req, res) => {
+    res.json(teamEntryData);
+  });
+}
+
+readTeamEntries(createTeamEntryEndPoint);

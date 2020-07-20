@@ -1,0 +1,52 @@
+{
+
+  "teamEntries": [
+
+    {
+      "title": "Where is the JSON located?",
+      "authorName": "Bob Jengals",
+      "authorPage": "#",
+      "date": "1/1/1",
+      "time": "3:25pm",
+      "authorPortrait": "Bob_Jengals.jpg",
+      "entryLink": "none"
+    },
+    {
+      "title": "Finished WebSocket Task #1451",
+      "authorName": "Daria Matthews",
+      "authorPage": "#",
+      "date": "1/1/1",
+      "time": "3:44pm",
+      "authorPortrait": "Daria_Matthews.jpg",
+      "entryLink": "none"
+
+    },
+    {
+      "title": "Lunch Tomorrow?",
+      "authorName": "Gregor Eisenhorn",
+      "authorPage": "#",
+      "date": "1/2/1",
+      "time": "1:25pm",
+      "authorPortrait": "Gregor_Eisenhorn.jpg",
+      "entryLink": "none"
+
+    },
+    {
+      "title": "Good Job Team!",
+      "authorName": "Nicole Robinson",
+      "authorPage": "#",
+      "date": "1/2/1",
+      "time": "3:25pm",
+      "authorPortrait": "Nicole_Robinson.jpg",
+      "entryLink": "none"
+
+    }
+
+
+
+  ]
+
+
+
+
+}

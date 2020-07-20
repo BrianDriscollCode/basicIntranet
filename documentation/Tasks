@@ -23,7 +23,15 @@ IMMEDIATE SMALL TASKS:
 4. Create transition between the images on gallery (CHECK)
 5. Have the gallery automatically transition (CHECK)
 6. Add Social media pane to dashboard (CHECK)
-7. Add Teams Pane to dashboard
+7. Add Teams Pane to dashboard (CHECK)
 8. Add Questions to dashboard
 9. Fix gallery, when clicking on it, the automatic function goes faster and erratic (CHECK)
-10. Make author names links
+10. Make author names links (CHECK)
+11. Make team titles linkable
+12. Create Author Pages
+13. Create Team Post Page
+14. Create team JSON (CHECK)
+15. Pull request from JSON for TEAMS (CHECK)
+16. Edit current pull from JSON (or Apply promise method to JSON) (CHECK)
+17. Link up gallery titles for real pages (once created) 
+18. Make Social Links Linkable and create social for each link
